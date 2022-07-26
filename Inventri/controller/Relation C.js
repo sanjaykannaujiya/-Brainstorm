@@ -39,7 +39,7 @@ exports.alluser=async(req,res)=>{
         const allfind= await User.find().skip(skip).limit(limit)
         res.status(200).json({message:"this is relation",allfind})
     }catch(error){
-        res.status(500).json(err)
+        res.status(500).json(error)
     }
 }
 exports.updateuser=async(req,res)=>{
