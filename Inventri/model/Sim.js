@@ -2,6 +2,11 @@ const { date } = require('joi')
 const mongoose =require('mongoose')
 const Schema =mongoose.Schema
 const simSchema =new Schema({
+    deviceId:{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:'Device',
+        required:true
+     },
     serial:{
         type:String,
         require:true,
@@ -34,6 +39,6 @@ const simSchema =new Schema({
  Date_activated:{
   type:Date,
   default:Date.now
- }
+ },
 })
 module.exports=mongoose.model("Sim",simSchema)
