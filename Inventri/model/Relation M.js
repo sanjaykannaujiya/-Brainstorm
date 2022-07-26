@@ -11,6 +11,7 @@ const relationSchema =new Schema({
         type:mongoose.Schema.Types.ObjectId,
         ref:'Sim',
         required:true,
+      
      },
 
 })

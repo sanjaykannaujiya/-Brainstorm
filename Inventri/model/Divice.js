@@ -3,21 +3,23 @@ const Schema =mongoose.Schema
 const deviceSchema =new Schema({
     imei:{
         type:String,
+        unique:true,
         required:true,
     },
       serial:{
         type:String,
-        require:true,
+        unique:true,
+        required:true,
 
       },
       model:{
         type:String,
-        require:true,
+        required:true,
 
       } ,
       manufacturer:{
         type:String,
-        require:true,
+        required:true,
 
       },
       Date_added:{

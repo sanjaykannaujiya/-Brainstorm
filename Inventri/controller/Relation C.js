@@ -34,12 +34,13 @@ exports.adduser=async(req,res)=>{
    }
 exports.alluser=async(req,res)=>{ 
     try{
-        const{page,limit}=(req,query)
+        const{page,limit}=(req .query)
         const skip=(page-1)*10
         const allfind= await User.find().skip(skip).limit(limit)
         res.status(200).json({message:"this is relation",allfind})
     }catch(error){
         res.status(500).json(error)
+        console.log(error)
     }
 }
 exports.updateuser=async(req,res)=>{
